@@ -14,10 +14,36 @@
       <div id="header_container">
         <img id="logo" src="img/logofinal.png">
         <p id="title">CREER UNE RECETTE</p>
+      </div>
         <form>
           <div id="section_titre">
             <label>Titre :</label>
             <input type="text" id="titre_recette">
+          </div>
+          <div id="section_categorie">
+            <label>Catégorie :</label>
+            <select name="pets" id="pet-select">
+              <option value="">--Sélectionner une catégorie--</option>
+              <option value="Petit-dejeuner">Petit-déjeuner</option>
+              <option value="Entree">Entrée</option>
+              <option value="Plat">Plat</option>
+              <option value="Dessert">Dessert</option>
+              <option value="En-cas">En-cas</option>
+              <option value="Aperitif">Apéritif</option>
+            </select>
+          </div>
+          <div id="section_ingredients">
+            <label id="titre_ingredients">Ingrédients :</label>
+            <textarea id="ingredients_area">
+            </textarea>
+          </div>
+          <div id="section_etapes">
+            <label id="titre_ietapes">Etapes :</label>
+            <textarea id="etapes_area">
+            </textarea>
+          </div>
+          <div id="section_submit">
+            <input type="submit" id="submit_btn" value="Enregistrer la recette">
           </div>
 
         </form>

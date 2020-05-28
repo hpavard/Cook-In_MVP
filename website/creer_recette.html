@@ -22,7 +22,7 @@
           </div>
           <div id="section_categorie">
             <label>Catégorie</label>
-            <select name="pets" id="pet-select">
+            <select name="categories" id="categorie_select">
               <option value="">--Sélectionner une catégorie--</option>
               <option value="Petit-dejeuner">Petit-déjeuner</option>
               <option value="Entree">Entrée</option>
@@ -47,6 +47,37 @@
           </div>
 
         </form>
+
+        <script>
+            let recipes = [];
+
+            const addRecipe = (ev)=>{
+                ev.preventDefault();  //to stop the form submitting
+                let recipe = {
+                    id: Date.now(),
+                    title: document.getElementById('titre_recette').value,
+                    categorie: document.getElementById('categorie_select').value,
+                    ingredient: document.getElementById('ingredients_area').value,
+                    stage: document.getElementById('etapes_area').value
+                }
+                recipes.push(recipe);
+                document.forms[0].reset(); // to clear the form for the next entries
+
+
+                //for display purposes only
+                console.warn('added' , {recipes: recipes} );
+                let pre = document.querySelector('#msg pre');
+                if(pre){
+                    pre.textContent = '\n' + JSON.stringify(recipes,'\t',2);
+                }
+
+                //saving to localStorage
+                localStorage.setItem('MyRecipeList', JSON.stringify(recipes) );
+            }
+            document.addEventListener('DOMContentLoaded', ()=>{
+                document.getElementById('submit_btn').addEventListener('click', addRecipe);
+            });
+        </script>
 
       <nav id="barre_creer_recette">
         <img id="home_icon" src="img/home.png">

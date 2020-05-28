@@ -41,7 +41,7 @@
 
 #section_inscription {
   text-align: center;
-  margin-top: 4%;
+  margin-top: 8%;
 }
 
 #section_inscription p {
@@ -49,6 +49,18 @@
   font-family: Roboto, Medium, sans-serif;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+#section_pre_email {
+  text-align: center;
+  color: white;
+  font-family: Roboto, Medium, sans-serif;
+  text-transform: uppercase;
+}
+
+#section_pre_email p {
+  margin-bottom: 1%;
+  margin-top: 8%;
 }
 
 @media only screen

@@ -30,8 +30,10 @@ section p {
   height: 812px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid whitesmoke;
   position: relative;
+  margin-top: 3%;
+  border: 17px solid #222222;
+  border-radius: 45px;
 }
 
 #barre_creer_recette {
@@ -45,6 +47,8 @@ section p {
   align-items: center;
   flex-direction: row;
   justify-content: center;
+  border-bottom-left-radius: 45px;
+  border-bottom-right-radius: 45px;
 }
 
 #barre_creer_recette img {

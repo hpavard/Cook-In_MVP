@@ -18,11 +18,11 @@
         <form>
           <div id="section_titre">
             <label>Titre</label>
-            <input type="text" id="titre_recette">
+            <input type="text" id="titre_recette" required>
           </div>
           <div id="section_categorie">
             <label>Catégorie</label>
-            <select name="categories" id="categorie_select">
+            <select name="categories" id="categorie_select" required>
               <option value="">--Sélectionner une catégorie--</option>
               <option value="Petit-dejeuner">Petit-déjeuner</option>
               <option value="Entree">Entrée</option>
@@ -35,22 +35,21 @@
           </div>
           <div id="section_ingredients">
             <label id="titre_ingredients">Ingrédients</label>
-            <textarea id="ingredients_area">
+            <textarea id="ingredients_area" required>
             </textarea>
           </div>
           <div id="section_etapes">
             <label id="titre_ietapes">Etapes</label>
-            <textarea id="etapes_area">
+            <textarea id="etapes_area" required>
             </textarea>
           </div>
           <div id="section_submit">
-            <input type="submit" id="submit_btn" value="Enregistrer la recette" onclick="alert('Recette enregistrée!');window.location.href='home.html';">
-          </div>
+              <input type="submit" id="submit_btn" value="Enregistrer la recette" onclick="alert('Recette enregistrée!');window.location.href='home.html';">          </div>
 
         </form>
 
         <script>
-            let recipes = [];
+            var recipes = JSON.parse(localStorage.getItem('MyRecipeList')) || [];
 
             const addRecipe = (ev)=>{
                 ev.preventDefault();  //to stop the form submitting
@@ -61,23 +60,18 @@
                     ingredient: document.getElementById('ingredients_area').value,
                     stage: document.getElementById('etapes_area').value
                 }
+
                 recipes.push(recipe);
-                document.forms[0].reset(); // to clear the form for the next entries
-
-
-                //for display purposes only
-                console.warn('added' , {recipes: recipes} );
-                let pre = document.querySelector('#msg pre');
-                if(pre){
-                    pre.textContent = '\n' + JSON.stringify(recipes,'\t',2);
-                }
-
                 //saving to localStorage
                 localStorage.setItem('MyRecipeList', JSON.stringify(recipes) );
+
+                document.forms[0].reset(); // to clear the form for the next entries
+
             }
             document.addEventListener('DOMContentLoaded', ()=>{
                 document.getElementById('submit_btn').addEventListener('click', addRecipe);
             });
+
         </script>
 
       <nav id="barre_creer_recette">

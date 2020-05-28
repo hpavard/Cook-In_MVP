@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="mes_recettes.css"/>
+    <meta charset="UTF-8">
+    <title>Mes recettes</title>
+</head>
+
+<body>
+
+    <div id="container">
+      <div id="header_container">
+<!--        <img id="logo" src="img/logofinal.png">-->
+        <p id="title">MES RECETTES</p>
+      </div>
+
+      <section>
+
+
+
+      </section>
+
+      <script>
+        const section = document.querySelector('section');
+
+        const recipesJson = JSON.parse(localStorage.getItem('MyRecipeList'));
+
+        showRecipes(recipesJson);
+
+        function showRecipes(jsonObj)
+        {
+          var recipes = jsonObj;
+
+          console.log(recipes[0]);
+
+          for(var i = 0; i < recipes.length; i++){
+            var myDivLink = document.createElement('a');
+            var myDiv = document.createElement('div')
+            var myH2 = document.createElement('a');
+            var myPara1 = document.createElement('p');
+
+
+
+            myDivLink.href = "recette.html#" + i;
+
+            myH2.textContent = recipes[i].title;
+            myPara1.textContent = recipes[i].categorie;
+
+
+            myDiv.appendChild(myH2);
+            myDiv.appendChild(myPara1);
+            myDivLink.appendChild(myDiv);
+
+            section.appendChild(myDivLink);
+          }
+        }
+
+      </script>
+
+      <nav id="barre_creer_recette">
+        <img id="home_icon" src="img/home.png" onclick="window.location.href='index.html';">
+        <img id="book_icon" src="img/cookbook%20(1).png">
+        <img id="plus_icon" src="img/plus.png" onclick="window.location.href='creer_recette.html';">
+        <img id="back_icon" src="img/back.png" onclick="window.location.href='index.html';">
+      </nav>
+    </div>
+
+</body>
+
+</html>

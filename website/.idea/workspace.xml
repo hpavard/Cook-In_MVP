@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a52ae9b4-8481-44d5-a700-c0ac086e41c1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/creer_recette.html" beforeDir="false" afterPath="$PROJECT_DIR$/creer_recette.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recette.css" beforeDir="false" afterPath="$PROJECT_DIR$/recette.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recette.html" beforeDir="false" afterPath="$PROJECT_DIR$/recette.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +30,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -53,7 +51,8 @@
       <workItem from="1590571500873" duration="339000" />
       <workItem from="1590582119034" duration="4938000" />
       <workItem from="1590602033661" duration="5177000" />
-      <workItem from="1590648980271" duration="21308000" />
+      <workItem from="1590648980271" duration="21817000" />
+      <workItem from="1590695933372" duration="614000" />
     </task>
     <servers />
   </component>

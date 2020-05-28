@@ -17,6 +17,12 @@
   text-align: center;
 }
 
+#header_container p {
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
 #logo {
   width: 45%;
   margin-top: 9%;
@@ -31,6 +37,18 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+#section_inscription {
+  text-align: center;
+  margin-top: 4%;
+}
+
+#section_inscription p {
+  color: white;
+  font-family: Roboto, Medium, sans-serif;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 @media only screen

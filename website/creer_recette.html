@@ -36,11 +36,23 @@
             <label id="titre_ingredients">Ingrédients</label>
             <textarea id="ingredients_area" required>
             </textarea>
+            <script>
+              var field  = document.getElementById('ingredients_area');
+              field.value = "";
+              field.focus();
+              field.setSelectionRange(field, 1, 2);
+            </script>
           </div>
           <div id="section_etapes">
             <label id="titre_ietapes">Etapes</label>
             <textarea id="etapes_area" required>
             </textarea>
+            <script>
+              var field2  = document.getElementById('etapes_area');
+              field2.value = "";
+              field2.focus();
+              field2.setSelectionRange(field2, 1, 2);
+            </script>
           </div>
           <div id="section_submit">
               <input type="submit" id="submit_btn" value="Enregistrer la recette" onclick="alert('Recette enregistrée!');window.location.href='home.html';">          </div>

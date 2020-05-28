@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="mes_recettes.css"/>
     <meta charset="UTF-8">
-    <title>Créer une recette</title>
+    <title>Mes recettes</title>
 </head>
 
 <body>
@@ -38,9 +38,10 @@
             var myH2 = document.createElement('a');
             var myPara1 = document.createElement('p');
 
-            myReceipe.addEventListener("click", function() {
-              window.location.href="blabla.html#" + i;
-            });
+            myH2.href = "recette.html#" + i;
+/*            myReceipe.addEventListener("click", function() {
+              window.location.href="recette.html#" + i;
+            });*/
             myH2.textContent = recipes[i].title;
             myPara1.textContent = recipes[i].categorie;
 

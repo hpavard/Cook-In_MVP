@@ -22,7 +22,7 @@ section div {
   cursor: pointer;
 }
 
-section div a {
+section a {
   text-decoration: none;
   text-transform: uppercase;
   color: #222222;
@@ -30,20 +30,16 @@ section div a {
   font-weight: 600;
 }
 
-section div p {
+section p {
   margin-bottom: 0;
   background-color: #dd7b72;
   font-family: Roboto, sans-serif;
+  font-weight: 400;
   color: white;
-  width: 40%;
+  width: 50%;
   text-align: center;
   padding: 0.8%;
 }
-
-
-
-
-
 
 
 #logo {
@@ -133,8 +129,10 @@ textarea {
   height: 812px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid whitesmoke;
   position: relative;
+  margin-top: 3%;
+  border: 17px solid #222222;
+  border-radius: 45px;
 }
 
 #barre_creer_recette {
@@ -148,6 +146,8 @@ textarea {
   align-items: center;
   flex-direction: row;
   justify-content: center;
+  border-bottom-left-radius: 45px;
+  border-bottom-right-radius: 45px;
 }
 
 #barre_creer_recette img {

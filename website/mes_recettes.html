@@ -28,27 +28,31 @@
 
         showRecipes(recipesJson);
 
-        function showRecipes(jsonObj){
+        function showRecipes(jsonObj)
+        {
           var recipes = jsonObj;
 
           console.log(recipes[0]);
 
           for(var i = 0; i < recipes.length; i++){
-            var myReceipe = document.createElement('div');
+            var myDivLink = document.createElement('a');
+            var myDiv = document.createElement('div')
             var myH2 = document.createElement('a');
             var myPara1 = document.createElement('p');
 
-            myH2.href = "recette.html#" + i;
-/*            myReceipe.addEventListener("click", function() {
-              window.location.href="recette.html#" + i;
-            });*/
+
+
+            myDivLink.href = "recette.html#" + i;
+
             myH2.textContent = recipes[i].title;
             myPara1.textContent = recipes[i].categorie;
 
-            myReceipe.appendChild(myH2);
-            myReceipe.appendChild(myPara1);
 
-            section.appendChild(myReceipe);
+            myDiv.appendChild(myH2);
+            myDiv.appendChild(myPara1);
+            myDivLink.appendChild(myDiv);
+
+            section.appendChild(myDivLink);
           }
         }
 

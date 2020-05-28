@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="creer_recette.css"/>
     <script src="https://kit.fontawesome.com/aa1f9c66ba.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <title>COOK'IN</title>
+    <title>Créer une recette</title>
 </head>
 
 <body>
@@ -44,7 +44,7 @@
             </textarea>
           </div>
           <div id="section_submit">
-            <input type="submit" id="submit_btn" value="Enregistrer la recette">
+            <input type="submit" id="submit_btn" value="Enregistrer la recette" onclick="alert('Recette enregistrée!');window.location.href='home.html';">
           </div>
 
         </form>
@@ -81,9 +81,10 @@
         </script>
 
       <nav id="barre_creer_recette">
-        <img id="home_icon" src="img/home.png">
+        <img id="home_icon" src="img/home.png" onclick="window.location.href='home.html';">
         <img id="book_icon" src="img/cookbook.png">
-        <img id="menu_icon" src="img/bars.png">
+        <img id="plus_icon" src="img/add%20(1).png" onclick="window.location.href='creer_recette.html';">
+        <img id="back_icon" src="img/back.png" onclick="window.location.href='home.html';">
       </nav>
     </div>
 

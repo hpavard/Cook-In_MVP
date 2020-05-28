@@ -116,6 +116,7 @@ textarea {
   height: 43%;
   margin-left: 9%;
   margin-right: 9%;
+  cursor: pointer;
 }
 
 @media only screen

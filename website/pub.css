@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+}
+
+#container {
+  width: 375px;
+  height: 812px;
+  background-color: #dd7b72;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin-top: 3%;
+  border: 17px solid #222222;
+  border-radius: 45px;
+}
+
+#header_container {
+  text-align: center;
+}
+
+#header_container p {
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+#logo {
+  width: 45%;
+  margin-top: 9%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#mockup {
+  width: 45%;
+  margin-top: 7%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#section_inscription {
+  text-align: center;
+  margin-top: 6%;
+}
+
+#section_inscription p {
+  color: white;
+  font-family: Roboto, Medium, sans-serif;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#section_pre_email {
+  text-align: center;
+  color: white;
+  font-family: Roboto, Medium, sans-serif;
+  text-transform: uppercase;
+}
+
+#section_pre_email p {
+  margin-bottom: 1%;
+  margin-top: 8%;
+}
+
+form #mc-embedded-subscribe-form {
+  margin-bottom: 0;
+}
+
+#end {
+  width: 100%;
+  text-align: center;
+}
+
+#undo {
+  width: 7%;
+  cursor: pointer;
+}
+
+@media only screen
+and (device-width : 375px)
+and (device-height : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+
+  #container {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+

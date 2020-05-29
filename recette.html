@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="recette.css"/>
+    <script src="https://kit.fontawesome.com/aa1f9c66ba.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>Créer une recette</title>
 </head>
@@ -44,19 +45,44 @@
 
           var myArticle = document.createElement('article');
           var myH2 = document.createElement('h2');
-          var myPara1 = document.createElement('p');
-          var myPara2 = document.createElement('p');
-          var myPara3 = document.createElement('p');
+          var myPara1 = document.createElement('h3');
+          var myPara2 = document.createElement('div');
+          var myPara3 = document.createElement('div');
+          var myTitlePara3 = document.createElement('h4');
+          var myTitlePara2 = document.createElement('h1');
+
+          var ingredients = recipe[index].ingredient.split('\n');
+          console.log(ingredients);
+
+          for (var i=0;i<ingredients.length;i++){
+            var myIngredient = document.createElement('p');
+            myIngredient.innerHTML= "-" + ingredients[i] ;
+            console.log(myIngredient.innerHTML);
+            myPara2.appendChild(myIngredient);
+          }
+
+          var stages = recipe[index].stage.split('\n');
+          console.log(stages);
+
+          for (var i=0;i<stages.length;i++){
+            var myStage = document.createElement('p');
+            myStage.innerHTML= stages[i] ;
+            console.log(myStage.innerHTML);
+            myPara3.appendChild(myStage);
+          }
 
 
-          myH2.textContent = recipe[index].title;
-          myPara1.textContent = 'Catégorie: ' + recipe[index].categorie;
-          myPara2.textContent = 'Ingrédients: ' + recipe[index].ingredient;
-          myPara3.textContent = 'Etapes: ' + recipe[index].stage;
+          myH2.innerHTML = recipe[index].title;
+          myPara1.innerHTML = recipe[index].categorie;
+          myTitlePara2.innerHTML = 'Ingrédients' ;
+          myTitlePara3.innerHTML = 'Etapes' ;
+
 
           myArticle.appendChild(myH2);
           myArticle.appendChild(myPara1);
+          myArticle.appendChild(myTitlePara2);
           myArticle.appendChild(myPara2);
+          myArticle.appendChild(myTitlePara3);
           myArticle.appendChild(myPara3);
 
           section.appendChild(myArticle);
@@ -65,7 +91,7 @@
         </script>
 
       <nav id="barre_creer_recette">
-        <img id="home_icon" src="img/home.png" onclick="window.location.href='home.html';">
+        <img id="home_icon" src="img/home.png" onclick="window.location.href='index.html';">
         <img id="book_icon" src="img/cookbook.png" onclick="window.location.href='mes_recettes.html';">
         <img id="plus_icon" src="img/plus.png" onclick="window.location.href='creer_recette.html';">
         <img id="back_icon" src="img/back.png" onclick="window.location.href='mes_recettes.html';">
